@@ -229,8 +229,13 @@ reads.fastq/*
 Loris_introduction_to_linux.pdf
 point2.png
 project.txt
+unix.pdf
 res.tvs
 *boh*
+bho10.png
+bho.png
+report/.editorconfig
+*fuse_hidden*
 code/*.wig
 code/*.csv
 code/*.txt
