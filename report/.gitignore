@@ -6,10 +6,6 @@
 *.fls
 *.out
 *.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
 
 ## Intermediate documents:
 *.dvi
@@ -17,10 +13,7 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
-
-## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+*.pdf #for the moment
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -28,17 +21,18 @@
 *.blg
 *-blx.aux
 *-blx.bib
+*.brf
 *.run.xml
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
 *.synctex
-*.synctex(busy)
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
 
 ## Auxiliary and intermediate files from other packages:
+
 # algorithms
 *.alg
 *.loa
@@ -51,35 +45,11 @@ acs-*.bib
 
 # beamer
 *.nav
-*.pre
 *.snm
 *.vrb
 
-# changes
-*.soc
-
-# cprotect
-*.cpt
-
-# elsarticle (documentclass of Elsevier journals)
-*.spl
-
-# endnotes
-*.ent
-
-# fixme
-*.lox
-
-# feynmf/feynmp
-*.mf
-*.mp
-*.t[1-9]
-*.t[1-9][0-9]
-*.tfm
-
-#(r)(e)ledmac/(r)(e)ledpar
+#(e)ledmac/(e)ledpar
 *.end
-*.?end
 *.[1-9]
 *.[1-9][0-9]
 *.[1-9][0-9][0-9]
@@ -99,21 +69,15 @@ acs-*.bib
 *.glg
 *.glo
 *.gls
-*.glsdefs
 
 # gnuplottex
 *-gnuplottex-*
-
-# gregoriotex
-*.gaux
-*.gtex
 
 # hyperref
 *.brf
 
 # knitr
 *-concordance.tex
-# TODO Comment the next line if you want to keep your tikz graphics files
 *.tikz
 *-tikzDictionary
 
@@ -128,12 +92,8 @@ acs-*.bib
 
 # minitoc
 *.maf
-*.mlf
-*.mlt
-*.mtc[0-9]*
-*.slf[0-9]*
-*.slt[0-9]*
-*.stc[0-9]*
+*.mtc
+*.mtc0
 
 # minted
 _minted*
@@ -145,92 +105,35 @@ _minted*
 # nomencl
 *.nlo
 
-# pax
-*.pax
-
-# pdfpcnotes
-*.pdfpc
-
 # sagetex
 *.sagetex.sage
 *.sagetex.py
 *.sagetex.scmd
-
-# scrwfile
-*.wrt
 
 # sympy
 *.sout
 *.sympy
 sympy-plots-for-*.tex/
 
-# pdfcomment
-*.upa
-*.upb
-
-# pythontex
-*.pytxcode
-pythontex-files-*/
-
-# thmtools
-*.loe
-
-# TikZ & PGF
-*.dpth
-*.md5
-*.auxlock
-
 # todonotes
 *.tdo
-
-# easy-todo
-*.lod
 
 # xindy
 *.xdy
 
-# xypic precompiled matrices
-*.xyc
-
-# endfloat
-*.ttt
-*.fff
-
-# Latexian
-TSWLatexianTemp*
-
-## Editors:
 # WinEdt
 *.bak
 *.sav
 
-# Texpad
-.texpadtmp
+#Emacs
+*.*~
+#*#.*
+*.#*#
 
-# Kile
-*.backup
+#Other
+*.pdf
 
-# KBibTeX
-*~[0-9]*
+res/listOfSections.tex
 
-# auto folder when using emacs and auctex
-/auto/*
-
-# expex forward references with \gathertags
-*-tags.tex
-
-*.sam
-*.bam*
-*prova*
-*.zip
-*.fasta*
-unique_a
-reads.fastq/*
-Loris_introduction_to_linux.pdf
-point2.png
-project.txt
-res.tvs
-*boh*
-code/*.wig
-code/*.csv
-code/*.txt
+Tesi.zip
+bin/*

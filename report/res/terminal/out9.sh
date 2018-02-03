@@ -1,0 +1,1 @@
+samtools sort lact.bam lact_sorted

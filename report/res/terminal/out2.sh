@@ -1,0 +1,1 @@
+bwa index Lactobacillus_casei_genome.fasta

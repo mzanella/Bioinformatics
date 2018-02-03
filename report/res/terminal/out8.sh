@@ -1,0 +1,1 @@
+samtools view -bS res.sam > lact.bam

@@ -1,0 +1,242 @@
+%**************************************************************
+% file contenente le impostazioni della tesi
+%**************************************************************
+
+%**************************************************************
+% Frontespizio
+%**************************************************************
+\newcommand{\myName}{Marco Zanella}                             % autore
+\newcommand{\myTitle}{Bioinformatiocs project}
+\newcommand{\myUni}{University of Padua}           % università
+\newcommand{\myFaculty}{Master's Degree in Computer Science}         % facoltà
+\newcommand{\myDepartment}{Mathematics Department}          % dipartimento
+\newcommand{\myLocation}{Padua}                                % dove
+\newcommand{\myAA}{2017-2018}                                   % anno
+\newcommand{\myCopyright}{CC-BY-SA-4.0}                         % copyright
+\newcommand{\myVersion}{v0.0.1}                                 % versione
+\newcommand{\myRelease}{
+XXXXXXXXXXX}
+\newcommand{\myIssue}{
+XXXXXXXXXXX}
+\newcommand{\myPullRequest}{
+XXXXXXXXXXX}
+
+%**************************************************************
+% Short cuts
+%**************************************************************
+\newcommand{\newglsacr}[2]{\newacronym[see={[Glossary:]{#1}}]{a-#1}{#1}{#2}}
+
+%**************************************************************
+% Impostazioni di impaginazione
+% see: http://wwwcdf.pd.infn.it/AppuntiLinux/a2547.htm
+%**************************************************************
+
+\setlength{\parindent}{14pt}   % larghezza rientro della prima riga
+\setlength{\parskip}{0pt}   % distanza tra i paragrafi
+
+
+%**************************************************************
+% Impostazioni di caption
+%**************************************************************
+\captionsetup{
+    tableposition=top,
+    figureposition=bottom,
+    font=small,
+    format=hang,
+    labelfont=bf
+}
+
+%**************************************************************
+% Impostazioni di glossaries
+%**************************************************************
+\makeglossaries
+\input{res/glossary} % database di termini
+
+%**************************************************************
+% Impostazioni di graphicx
+%**************************************************************
+\graphicspath{{res/img/}} % cartella dove sono riposte le immagini
+
+
+%**************************************************************
+% Impostazioni di hyperref
+%**************************************************************
+\hypersetup{
+    %hyperfootnotes=false,
+    %pdfpagelabels,
+    %draft,	% = elimina tutti i link (utile per stampe in bianco e nero)
+    colorlinks=true,
+    linktocpage=true,
+    pdfstartpage=1,
+    pdfstartview=FitV,
+    % decommenta la riga seguente per avere link in nero (per esempio per la
+%stampa in bianco e nero)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=1,
+%pdfstartview=FitV,
+    breaklinks=true,
+    pdfpagemode=UseNone,
+    pageanchor=true,
+    pdfpagemode=UseOutlines,
+    plainpages=false,
+    bookmarksnumbered,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    hypertexnames=true,
+    pdfhighlight=/O,
+    %nesting=true,
+    %frenchlinks,
+    urlcolor=webbrown,
+    linkcolor=webbrown,
+    citecolor=webgreen,
+    %pagecolor=RoyalBlue,
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,
+    pdftitle={\myTitle},
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},
+    pdfsubject={},
+    pdfkeywords={},
+    pdfcreator={pdfLaTeX},
+    pdfproducer={LaTeX}
+}
+
+%**************************************************************
+% Impostazioni di itemize
+%**************************************************************
+%\renewcommand{\labelitemi}{$\ast$}
+
+%\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemii}{$\cdot$}
+%\renewcommand{\labelitemiii}{$\diamond$}
+%\renewcommand{\labelitemiv}{$\ast$}
+
+
+%**************************************************************
+% Impostazioni di listings
+%**************************************************************
+\lstset{ 
+  language=R,                     % the language of the code
+  basicstyle=\tiny\ttfamily, % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{Blue},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it is 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  keywordstyle=\color{RoyalBlue},      % keyword style
+  commentstyle=\color{Gray},   % comment style
+  stringstyle=\color{ForestGreen}      % string literal style
+} 
+
+
+%**************************************************************
+% Impostazioni di xcolor
+%**************************************************************
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\definecolor{Pantone}{RGB}{155,0,20}
+\definecolor{GrigioLight}{RGB}{152, 152, 152}
+
+
+%**************************************************************
+% Altro
+%**************************************************************
+
+\newcommand{\omissis}{[\dots\negthinspace]} % produce [...]
+
+% eccezioni all'algoritmo di sillabazione
+\hyphenation
+{
+    ma-cro-istru-zio-ne
+    gi-ral-din
+}
+
+\newcommand{\sectionname}{sezione}
+%\addto\captionsitalian{\renewcommand{\figurename}{figura}
+%                       \renewcommand{\tablename}{tabella}}
+
+\newcommand{\glsfirstoccur}{\ap{{[g]}}}
+
+\newcommand{\intro}[1]{\emph{\textsf{#1}}}
+
+%-------------------INIZIO creazione subsubparagraph---------------------------
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\def\toclevel@subsubparagraph{6}
+\renewcommand\thesubsubparagraph{%
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {-1em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{13.5em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{}
+\setcounter{tocdepth}{6}
+\setcounter{secnumdepth}{6} % aggiunge contatore ai paragrafi
+\makeatother
+%-------------------FINE creazione subsubparagraph-----------------------------
+
+%-------------------Capitoli personalizzati------------------------------------
+
+\titleformat{\chapter}[display]
+  {\normalsize \huge  \color{black}}%
+  {\flushright\normalsize \color{Pantone}%
+   \MakeUppercase{\chaptertitlename}\hspace{1ex}%
+   {\fontsize{60}{60}\selectfont\thechapter}}%
+  {10 pt}%
+  {\bfseries\huge#1}%
+
+%----------------FINE Capitoli personalizzati----------------------------------
+
+%----------------INIZIO Parte personalizzata-----------------------------------
+
+\renewcommand\thepart{\Alph{part}}
+
+\newcommand\partnumfont{% font specification for the number
+  \fontsize{304}{104}\color{white}\selectfont%
+}
+
+\newcommand\partnamefont{% font specification for the name "PART"
+  \color{white}\huge\bfseries%
+}
+
+\titleformat{\part}[display]
+   {\normalfont\huge\filleft}
+   { }
+   {20pt}
+   {\begin{tikzpicture}[remember picture,overlay]
+  \fill[GrigioLight]
+    (current page.north west) rectangle ([yshift=-13cm]current page.north
+east);
+    \node[
+      fill=Pantone,
+      text width=2\paperwidth,
+      rounded corners=6cm,
+      text depth=12cm,
+      anchor=center,
+      inner sep=0pt] at ([yshift=21cm]current page.south west) (parttop)
+    {\thepart};%
+    \node[
+      anchor=center,
+      inner sep=0pt,
+      outer sep=0pt] at ([xshift=16cm, yshift=6cm]parttop.south) (partnum)
+    {\partnumfont\thepart};%
+    \node[
+      anchor=north east,
+      align=right,
+      inner sep=0pt] at ([yshift=10cm] current page.center)
+    {\parbox{.7\textwidth}{\raggedleft\partnamefont\MakeUppercase{#1}}};
+    \end{tikzpicture}%
+}
+
+%--------------- FINE parte personalizzata ------------------------------------
