@@ -20,9 +20,10 @@ findRepeatedReads = function(path) {
   m1 = t[t==2]
 
   ## write results on files
-  write.table(m2, file='more_than_2_alignements.csv', col.names=FALSE,
-    row.names=FALSE)
-  write.table(m2, file='only_1_alignement.csv', col.names=FALSE, row.names=FALSE)
+  write.table(m2, file='more_than_2_alignements.csv', sep=',', col.names=FALSE,
+    row.names=FALSE, quote=FALSE)
+  write.table(m1, file='only_1_alignement.csv', sep=',', col.names=FALSE,
+    row.names=FALSE, quote=FALSE)
 }
 
 ## catch the user input and call the function
