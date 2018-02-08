@@ -16,9 +16,9 @@ would be nice to implement the suggestions described in
 track\label{itm:2.10}
 
 \item Read the sam file and for each mate pair calculate the length of the
-genomic insert; then calculate the mean and standard deviation of the inserts,
-possibly discarding those that are totally out of range. A plot of the length
-distribution may help to evaluate the sizes.
+genomic insert; then calculate the average and standard deviation of the
+inserts, possibly discarding those that are totally out of range. A plot of the
+length distribution may help to evaluate the sizes.
 \label{itm:2.11}
 
 \item Create a track with the percentage of inserts with a length exceeding n
@@ -32,9 +32,9 @@ standard deviations (for instance n=2) above or below the mean.
 I have chosen to implement all the scripts using the language \texttt{R} and
 take advantage of some \texttt{bash} command embedded inside the scripts. Since
 \texttt{R} is a programming language designed to manipulate large statistics I
-loaded all the data needed in order to run the scripts. The is due to the
-cycles: in fact R does not works well with that constructs and this slows down
-the programs.
+loaded all the data needed in order to run the scripts. The inefficiency is due
+to the cycles: in fact \texttt{R} does not works well with that constructs and
+their use slows down the programs.
 
 All the following functions require the \filef{common.R} in which there are some
 utility functions.
@@ -58,6 +58,7 @@ R function to calculate the \textbf{sequence coverage}. It requires as arguments
 the path to the \filef{sam} file and the length of the reference genome.
 \scriptusage
 \lstinputlisting[language=R]{../code/sequencecoverage.R}
+The track created with this script is really similar to the IGV track.
 
 \section{Solution for task~\hyperref[itm:2.11]{11}}
 R function to calculate the \textbf{inserts length}. It requires as arguments
@@ -65,7 +66,7 @@ the path to the \filef{sam} file and the length of the reference genome.
 \scriptusage
 \lstinputlisting[language=R]{../code/genomeinserts.R}
 
-The \textit(mean) and the \textit{standard deviation} of the genomic inserts 
+The \textit{mean} and the \textit{standard deviation} of the genomic inserts 
 could be easly and efficiently calculated using the two R function \texttt{mean}
 and \texttt{sd}. In my functions are calculated in the \filef{main.R} file,
 discarding 0 values. The values calculated are:
@@ -92,9 +93,9 @@ loaded on IGV.
 \end{figure}
 
 In figure~\ref{fig:inserts} we could see a representation of the length of the
-inserts. In the graph for each inserts is displayed $insert\_length - mean$ and
-the 2 lines represents respectively $standard\_deviation * 2$ and $standard\
-deviation * 3$
+inserts. In the graph for each insert is displayed $insert\_length - mean$ and
+the 2 lines represents respectively $standard\_deviation * 2$ (the orange one)
+and $standard\_deviation * 3$ (the red one).
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{inserts}
@@ -102,8 +103,8 @@ deviation * 3$
 \label{fig:inserts}
 \end{figure}
 
-From the graph~\ref{fig:inserts} we could see that some inserts are really long
-more than 12000 bases. The longest is 16281 bases long.
+In the graph~\ref{fig:inserts} we could see that some inserts are really long,
+certain more than 12000 bases. The longest is 16281 bases long.
 
 This graph is generated using R, using this script:
 \lstinputlisting[language=R]{../code/plotinserts.R}

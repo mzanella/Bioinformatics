@@ -9,11 +9,11 @@ Instead of align the reads with the command:
 \lstinputlisting[language=bash]{res/terminal/out4.sh}
 The reads could be aligned with this one:
 \lstinputlisting[language=bash]{res/terminal/out11.sh}
-In order to output all found alignments for single-end or unpaired paired-end
+In order to output all alignments found for single-end or unpaired paired-end
 reads and these alignments will be flagged as secondary alignments.
 After that I created this script in order to find out the reads that where
 present in the resulting \filef{sam} file only twice (possibly there is only
 one alignment) and the reads that are present 3 or more times (those could map
 in more genomic position). This are saved in 2 different csv files named
-\filef{only\_1\_alignement.csv} and \filef{more\_than\_2\_alignements.csv}
+\filef{only\_1\_alignment.csv} and \filef{more\_than\_2\_alignments.csv}
 \lstinputlisting[language=R]{../code/repeated.R}
